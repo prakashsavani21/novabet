@@ -1,10 +1,7 @@
-# YESTERDAY CASINO Premium Home
+# Yesterday Casino — Full Games Demo
 
-Premium mobile-first frontend for an original casino platform.
+Premium front-end prototype containing all 27 requested game concepts and interactive virtual-credit demos.
 
-Files:
-- index.html
-- styles.css
-- app.js
+The build is intentionally demo-only: no real-money deposits, withdrawals, private keys, blockchain signing, or payment processing are included.
 
-This is a frontend layer only. Real-money wallet, authentication, game settlement and blockchain services must be implemented server-side with appropriate security/compliance controls before production use.
+Before any production gambling launch, implement applicable licensing/jurisdiction controls, age/identity requirements, responsible-gambling features, audited server-side game logic, secure ledger/custody, monitoring, and legal/security review.
