@@ -1,7 +1,11 @@
-# Yesterday Casino — Full Games Demo
+# Yesterday Casino — Working Frontend
 
-Premium front-end prototype containing all 27 requested game concepts and interactive virtual-credit demos.
+This is a complete static frontend prototype for Yesterday Casino with all 27 requested game screens and playable virtual-credit interactions.
 
-The build is intentionally demo-only: no real-money deposits, withdrawals, private keys, blockchain signing, or payment processing are included.
+Upload these four files to the GitHub Pages repository:
+- index.html
+- styles.css
+- app.js
+- README.md
 
-Before any production gambling launch, implement applicable licensing/jurisdiction controls, age/identity requirements, responsible-gambling features, audited server-side game logic, secure ledger/custody, monitoring, and legal/security review.
+Important: this is demo-only. It does not implement real-money wagering, deposits, withdrawals, crypto custody, blockchain signing, or payment processing. Production gambling requires applicable licensing, jurisdiction/age controls, responsible-gambling controls, audited server-side game logic, secure ledger/custody, monitoring and legal/security review.

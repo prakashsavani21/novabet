@@ -1,28 +1,66 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Yesterday Casino — Original Games Demo</title>
-<meta name="description" content="Yesterday Casino original game lobby demo. Virtual credits only.">
-<link rel="stylesheet" href="styles.css"></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yesterday Casino</title>
+<meta name="description" content="Yesterday Casino original games frontend demo">
+<link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<div class="app">
-<header class="topbar">
-<a class="brand" href="#home"><span class="brand-mark">Y</span><span>YESTERDAY<span class="brand-sub">CASINO</span></span></a>
-<div class="search"><span>⌕</span><input id="search" placeholder="Search games..."></div>
-<nav><a href="#home">Home</a><a href="#games">Games</a><a href="#bonuses">Bonuses</a></nav>
-<div class="actions"><button class="ghost" id="signin">Sign In</button><button class="primary" id="register">Register</button></div>
+<header class="top">
+  <a class="logo" href="#"><span class="logoMark">Y</span><span>YESTERDAY<small>CASINO</small></span></a>
+  <nav><a href="#games">Casino</a><a href="#bonus">Bonus</a><a href="#fair">Fairness</a></nav>
+  <div class="topRight">
+    <div class="balance">◉ <span id="balance">10,000</span> DEMO</div>
+    <button class="btn ghost" onclick="openAccount('Sign In')">Sign In</button>
+    <button class="btn primary" onclick="openAccount('Register')">Register</button>
+  </div>
 </header>
+
 <main>
-<section class="hero" id="home"><div><div class="eyebrow">WELCOME TO YESTERDAY</div>
-<h1>Play the <span>unexpected.</span></h1>
-<p>27 original game experiences in one premium lobby. This build is a <b>virtual-credit demo</b> for UI and game-engine development.</p>
-<div class="hero-actions"><a class="primary big" href="#games">Explore Games</a><button class="secondary big" id="demoBonus">Claim Demo Credits</button></div></div>
-<div class="hero-card"><div class="orb">Y</div><div><b>DEMO WALLET</b><strong id="balanceHero">10,000</strong><small>virtual credits</small></div></div></section>
-<section class="promo" id="bonuses"><div><b>100 USDT WELCOME BONUS</b><span>Production bonus rules can be configured later. This demo uses virtual credits only.</span></div><span class="badge">15× DEMO WAGER</span></section>
-<section class="section" id="games"><div class="section-head"><div><h2>All Games</h2><p>Choose a game to open its interactive demo.</p></div>
-<div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="table">Table</button><button class="filter" data-filter="dice">Dice</button><button class="filter" data-filter="mines">Mines</button><button class="filter" data-filter="slots">Arcade</button></div></div>
-<div class="grid" id="grid"></div></section></main>
-<footer><div class="brand"><span class="brand-mark">Y</span><span>YESTERDAY<span class="brand-sub">CASINO</span></span></div><span>Original demo interface • Virtual credits only</span><div><a href="#fair">Provably Fair</a><a href="#terms">Terms</a><a href="#privacy">Privacy</a></div></footer>
+<section class="hero">
+  <div class="heroCopy">
+    <div class="eyebrow">YESTERDAY CASINO</div>
+    <h1>Original games.<br><span>One premium lobby.</span></h1>
+    <p>Explore all 27 game concepts. Every game below is playable with virtual demo credits in this frontend build.</p>
+    <div class="heroButtons"><a class="btn primary large" href="#games">Play Games</a><button class="btn dark large" onclick="claimDemo()">+1,000 Demo Credits</button></div>
+  </div>
+  <div class="heroVisual">
+    <div class="heroOrb">Y</div>
+    <div class="heroStats"><b>DEMO WALLET</b><strong id="heroBalance">10,000</strong><small>virtual credits</small></div>
+  </div>
+</section>
+
+<section class="bonus" id="bonus">
+  <div><b>WELCOME BONUS</b><strong>100 USDT</strong><span>Production bonus terms can be configured later.</span></div>
+  <div class="wager">15× WAGERING</div>
+</section>
+
+<section class="gamesSection" id="games">
+  <div class="sectionHead">
+    <div><div class="eyebrow">PLAY NOW</div><h2>Original Games</h2></div>
+    <input id="search" class="search" placeholder="⌕  Search games...">
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="gameGrid" id="gameGrid"></div>
+</section>
+
+<section class="info" id="fair">
+  <div><h2>Built for an original game experience.</h2><p>This frontend is designed for your own game engine. It currently uses virtual demo credits and local browser state only.</p></div>
+  <div class="infoCards"><div><b>27</b><span>Game screens</span></div><div><b>100%</b><span>Original UI</span></div><div><b>0</b><span>Real-money transactions</span></div></div>
+</section>
+</main>
+
+<footer><div class="logo"><span class="logoMark">Y</span><span>YESTERDAY<small>CASINO</small></span></div><span>Frontend demo • Virtual credits only</span><div><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Responsible Play</a></div></footer>
+
+<div class="modal hidden" id="modal">
+ <div class="modalBackdrop" onclick="closeModal()"></div>
+ <div class="modalBox">
+  <button class="modalClose" onclick="closeModal()">×</button>
+  <div id="modalBody"></div>
+ </div>
 </div>
-<div class="modal hidden" id="modal"><div class="modal-box"><button class="close" id="close">×</button><div id="modalContent"></div></div></div>
-<script src="app.js"></script></body></html>
+<script src="app.js"></script>
+</body>
+</html>
