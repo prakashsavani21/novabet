@@ -1,63 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>NovaBet — Original Crypto Casino</title>
-  <meta name="description" content="Original crypto casino interface starter.">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YESTERDAY CASINO — Original Casino</title>
+<meta name="description" content="YESTERDAY CASINO — original casino games and premium gaming experience.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="#">NOVABET</a>
-  <div class="top-actions">
-    <button class="btn secondary" id="signin">Sign In</button>
-    <button class="btn primary" id="register">Register</button>
+<header class="header">
+  <a class="logo" href="#">YESTERDAY<span>CASINO</span></a>
+  <div class="head-actions">
+    <button class="login" id="loginBtn">Sign In</button>
+    <button class="register" id="registerBtn">Register</button>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div>
-      <span class="eyebrow">ORIGINAL GAMES</span>
-      <h1>Play. Bet. Win.</h1>
-      <p>Original casino games with a fast, mobile-first experience.</p>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="pill">✦ ORIGINALS ONLY</div>
+    <h1>Your game.<br><span>Your moment.</span></h1>
+    <p>Fast, original casino games built for a clean and exciting experience.</p>
+    <div class="hero-buttons">
+      <button class="register big" id="heroRegister">Claim Welcome Bonus</button>
+      <button class="outline big" id="gamesBtn">Explore Games</button>
     </div>
-    <div class="hero-actions">
-      <button class="btn primary" id="heroRegister">Create Account</button>
-      <button class="btn ghost" id="browse">Browse Games</button>
+    <div class="trust">
+      <span>● Secure platform</span><span>● Fair-play architecture</span><span>● 18+</span>
     </div>
-  </section>
+  </div>
+  <div class="bonus-card">
+    <div class="bonus-glow"></div>
+    <div class="bonus-label">WELCOME BONUS</div>
+    <div class="bonus-amount"><b>100</b> USDT</div>
+    <div class="wager">15× WAGERING</div>
+    <div class="bonus-line"></div>
+    <small>Terms & eligibility apply</small>
+  </div>
+</section>
 
-  <section class="toolbar">
-    <div class="tabs">
-      <button class="tab active" data-filter="all">All</button>
-      <button class="tab" data-filter="table">Table</button>
-      <button class="tab" data-filter="instant">Instant</button>
-      <button class="tab" data-filter="skill">Skill</button>
-    </div>
-    <input id="search" class="search" placeholder="Search games..." autocomplete="off">
-  </section>
+<section class="quick">
+  <button class="quick-card active" data-filter="all"><b>✦</b><span>All Games</span></button>
+  <button class="quick-card" data-filter="instant"><b>⚡</b><span>Instant</span></button>
+  <button class="quick-card" data-filter="table"><b>♠</b><span>Table</span></button>
+  <button class="quick-card" data-filter="skill"><b>◈</b><span>Skill</span></button>
+</section>
 
-  <section id="games" class="games"></section>
+<section class="section-head">
+  <div><div class="section-kicker">PLAY NOW</div><h2>Original Games</h2></div>
+  <div class="search-wrap">⌕ <input id="search" placeholder="Search games"></div>
+</section>
+
+<section id="games" class="games"></section>
 </main>
 
-<nav class="bottom-nav">
-  <a class="active" href="#">⌂<span>Home</span></a>
-  <a href="#games">◈<span>Casino</span></a>
-  <a href="#wallet">◉<span>Wallet</span></a>
-  <a href="#profile">●<span>Profile</span></a>
+<nav class="bottom">
+ <a class="active" href="#">⌂<span>Home</span></a>
+ <a href="#games">◈<span>Casino</span></a>
+ <a href="#bonus">✦<span>For You</span></a>
+ <a href="#">◉<span>Wallet</span></a>
+ <a href="#">●<span>Profile</span></a>
 </nav>
 
 <div id="modal" class="modal hidden">
-  <div class="modal-card">
-    <button class="close" id="close">×</button>
-    <h2 id="modalTitle">Welcome</h2>
-    <p id="modalText">Account actions will be connected to the production backend in the next phase.</p>
-    <button class="btn primary wide" id="modalAction">Continue</button>
-  </div>
+ <div class="modal-box">
+   <button class="x" id="close">×</button>
+   <div class="modal-icon">✦</div>
+   <h3 id="modalTitle">Welcome</h3>
+   <p id="modalText">Your account area will be connected in the next development phase.</p>
+   <button class="register wide" id="modalAction">Continue</button>
+ </div>
 </div>
-
 <script src="app.js"></script>
 </body>
 </html>
